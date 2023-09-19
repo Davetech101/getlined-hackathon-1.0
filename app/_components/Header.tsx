@@ -1,27 +1,41 @@
-import Link from "next/link"
+import Link from "next/link";
 
 const Header = () => {
+  const flex = "flex items-center justify-between";
+  const liStyles = "text-2xl"
+
   return (
-    <header className="p-10">
-        <div className="">
-            <Link href="/" className="text-5xl"><span className="">get</span><span className="">linked</span></Link>
+    <header className="px-24 py-16 border-b-border border-b">
+      <div className={`${flex}`}>
+        <Link href="/" className="text-5xl">
+          <span className="">get</span>
+          <span className="text-pink">linked</span>
+        </Link>
 
-            <nav>
-                <ul>
-                    <li>
-                        <Link href="/">Timeline</Link>
-                        <Link href="/">Overview</Link>
-                        <Link href="/">FAQs</Link>
-                        <Link href="/">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
+        <div className={`${flex} w-7/12 gap-60`}>
+          <nav className="w-full">
+            <ul className={`${flex} w-full`}>
+            <li className={liStyles}>
+                <Link href="/">Timeline</Link>
+              </li>
+              <li className={liStyles}>
+                <Link href="/">Overview</Link>
+              </li>
+              <li className={liStyles}>
+                <Link href="/">FAQs</Link>
+              </li>
+              <li className={liStyles}>
+                <Link href="/">Contact</Link>
+              </li>
+            </ul>
+          </nav>
 
-            <button className="">Register</button>
+          <button className="bg-gradient-to-r from-pink to-blue px-14 py-3 text-2xl rounded">Register</button>
         </div>
-        <div className="mobile"></div>
+      </div>
+      <div className="mobile"></div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
