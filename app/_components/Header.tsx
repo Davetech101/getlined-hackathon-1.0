@@ -1,11 +1,12 @@
 import Link from "next/link";
+import RegisterBtn from "../_reuseable/RegisterBtn";
 
 const Header = () => {
   const flex = "flex items-center justify-between";
   const liStyles = "text-2xl"
 
   return (
-    <header className="px-24 py-16 border-b-border border-b">
+    <header className="px-24 py-10 border-b-border border-b">
       <div className={`${flex}`}>
         <Link href="/" className="text-5xl">
           <span className="">get</span>
@@ -30,7 +31,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <button className="bg-gradient-to-r from-pink to-blue px-14 py-3 text-2xl rounded">Register</button>
+          <RegisterBtn/>
         </div>
       </div>
       <div className="mobile"></div>
