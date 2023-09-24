@@ -2,7 +2,7 @@
 type secProps = { children: React.ReactNode };
 const Section = ({ children }: secProps) => {
   return (
-    <section className="">
+    <section className="flex">
         {children}
     </section>
   )
