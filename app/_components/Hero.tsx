@@ -3,6 +3,7 @@ import RegisterBtn from "../_reuseable/RegisterBtn";
 import Image from "next/image";
 
 const Hero = () => {
+  const nomStyles = ''
   return (
     <Section>
       <div className="">
@@ -24,8 +25,8 @@ const Hero = () => {
               height={20}
             />
           </div>
-          <p className="text-9xl pr-10">
-            getlinked Tech Hackathon{" "}
+          <p className="text-9xl ">
+            getlinked Tech <br /> Hackathon{" "}
             <span className="text-pink inline-flex items-center justify-center">
               1.0{" "}
               <div className="chain">
@@ -50,14 +51,14 @@ const Hero = () => {
           </p>
         </h2>
 
-        <small>
+        <small className="text-3xl pr-24 w-3/4 mt-10 mb-14 block">
           Participate in getlinked tech Hackathon 2023 stand a chance to win a
           Big prize
         </small>
 
         <RegisterBtn />
 
-        <div className="star">
+        <div className="star absolute">
           <Image
             src={"/_assets/star2.png"}
             alt={"star"}
@@ -66,9 +67,9 @@ const Hero = () => {
           />
         </div>
 
-        <div className="">
-          <div className="">
-            00 <small className="">H</small>
+        <div className="flex items-center gap-10">
+          <div className="text-8xl">
+            00 <small className="text-xl -ml-3 inline-block">H</small>
           </div>
           <div className="">
             00 <small className="">M</small>
