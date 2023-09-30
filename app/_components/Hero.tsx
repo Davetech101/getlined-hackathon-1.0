@@ -9,8 +9,8 @@ const Hero = () => {
   return (
     <Section>
       <div className="h-3/6 flex items-center pl-24">
-        <div className="">
-          <div className="star absolute">
+        <div className="relative ">
+          <div className="star absolute -top-32 left-10">
             <Image
               src={"/_assets/star.png"}
               alt={"star"}
@@ -20,12 +20,12 @@ const Hero = () => {
           </div>
 
           <h2 className="">
-            <div className="bulb absolute">
+            <div className="bulb absolute right-96 -top-16">
               <Image
                 src={"/_assets/creative.png"}
                 alt={"star"}
-                width={20}
-                height={20}
+                width={40}
+                height={40}
               />
             </div>
             <p className="text-8xl ">
@@ -61,7 +61,7 @@ const Hero = () => {
 
           <RegisterBtn />
 
-          <div className="star absolute">
+          <div className="star absolute bottom-24 right-96 mr-14">
             <Image
               src={"/_assets/star2.png"}
               alt={"star"}
@@ -83,9 +83,9 @@ const Hero = () => {
           </div>
         </div>
         <div className="h-full flex flex-col align-center justify-between relative">
-          <div className="relative">
-            <h3 className="text-4xl">Igniting a Revolution in HR Innovation</h3>
-            <div className="absolute">
+          <div className="relative  -top-14">
+            <h3 className="text-5xl">Igniting a Revolution in HR Innovation</h3>
+            <div className="relative w-14 -right-96 ml-10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="255"
@@ -107,7 +107,6 @@ const Hero = () => {
             alt={"star"}
             width={700}
             height={700}
-            // className="w-full"
           />
           <Image
             src={"/_assets/spin.png"}
