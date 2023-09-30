@@ -1,12 +1,51 @@
+/* eslint-disable react/no-unescaped-entities */
 import Section from "../_reuseable/Section";
+import Image from "next/image";
 
 const Intro = () => {
   return (
     <Section>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto unde
-      dolorem vitae nulla eius deserunt expedita libero debitis praesentium
-      cumque officiis, fugiat laboriosam quibusdam sint dolor delectus.
-      Officiis, nesciunt reiciendis.
+      <main className="relative py-28 px-32 flex items-center justify-between gap-36">
+        <Image
+          src={"/_assets/bigIdea.png"}
+          alt={"idea"}
+          width={500}
+          height={500}
+        />
+
+        <div className="">
+          <div className="flex items-center justify-between">
+            <h3 className="text-5xl mb-10">
+              Introduction to getlinked <br />{" "}
+              <span className="text-pink">tech Hackathon 1.0</span>
+            </h3>
+
+            <Image
+              src={"/_assets/starPu.png"}
+              alt={"star"}
+              width={30}
+              height={20}
+            />
+          </div>
+
+          <p className="text-xl leading-10">
+            Our tech hackathon is a melting pot of visionaries, and its purpose
+            is as clear as day: to shape the future. Whether you're a coding
+            genius, a design maverick, or a concept wizard, you'll have the
+            chance to transform your ideas into reality. Solving real-world
+            problems, pushing the boundaries of technology, and creating
+            solutions that can change the world, that's what we're all about!
+          </p>
+        </div>
+
+        <Image
+          src={"/_assets/arrow.png"}
+          alt={"arrow"}
+          width={50}
+          height={50}
+          className="absolute bottom-40 left-2/4 -ml-32"
+        />
+      </main>
     </Section>
   );
 };

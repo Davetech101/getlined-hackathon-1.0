@@ -8,8 +8,8 @@ const Hero = () => {
 
   return (
     <Section>
-      <div className="h-3/6 flex items-center pl-24">
-        <div className="relative ">
+      <div className="h-3/6 flex items-center pl-24 pt-28">
+        <div className="relative">
           <div className="star absolute -top-32 left-10">
             <Image
               src={"/_assets/star.png"}
@@ -23,7 +23,7 @@ const Hero = () => {
             <div className="bulb absolute right-96 -top-16">
               <Image
                 src={"/_assets/creative.png"}
-                alt={"star"}
+                alt={"creative"}
                 width={40}
                 height={40}
               />
@@ -35,7 +35,7 @@ const Hero = () => {
                 <div className="chain">
                   <Image
                     src={"/_assets/chain.png"}
-                    alt={"star"}
+                    alt={"chain"}
                     width={60}
                     height={60}
                     className="w-24"
@@ -44,7 +44,7 @@ const Hero = () => {
                 <div className="fire">
                   <Image
                     src={"/_assets/fire.png"}
-                    alt={"star"}
+                    alt={"fire"}
                     width={60}
                     height={60}
                     className="w-24"
@@ -82,7 +82,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="h-full flex flex-col align-center justify-between relative">
+        <div className="flex flex-col align-center justify-between relative">
           <div className="relative  -top-14">
             <h3 className="text-5xl">Igniting a Revolution in HR Innovation</h3>
             <div className="relative w-14 -right-96 ml-10">
@@ -104,13 +104,13 @@ const Hero = () => {
 
           <Image
             src={"/_assets/avatar.png"}
-            alt={"star"}
+            alt={"avatar"}
             width={700}
             height={700}
           />
           <Image
             src={"/_assets/spin.png"}
-            alt={"star"}
+            alt={"spin"}
             width={700}
             height={700}
             className="w-full absolute"
