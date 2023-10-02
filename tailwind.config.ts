@@ -16,6 +16,7 @@ const config: Config = {
 
       colors: {
         pink: "#D434FE",
+        darkPink: "#FF26B9",
         blue: "#903AFF",
         border: "#d434fe14"
       }
