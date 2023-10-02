@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Section from "../_reuseable/Section";
 import H3 from "../_reuseable/H3";
+import Main from "../_reuseable/Main";
 
 const Attributes = () => {
   const attributesArr = [
@@ -36,7 +37,7 @@ const Attributes = () => {
   });
   return (
     <Section>
-      <main className="relative py-28 px-32 flex items-center justify-between gap-36">
+      <Main>
         <div className="w-full relative">
           <Image
             src={"/_assets/starPu.png"}
@@ -68,7 +69,7 @@ const Attributes = () => {
             Register
           </button>
         </div>
-      </main>
+      </Main>
     </Section>
   );
 };

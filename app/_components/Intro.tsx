@@ -2,11 +2,12 @@
 import Section from "../_reuseable/Section";
 import Image from "next/image";
 import H3 from "../_reuseable/H3";
+import Main from "../_reuseable/Main";
 
 const Intro = () => {
   return (
     <Section>
-      <main className="relative py-28 px-32 flex items-center justify-between gap-36">
+      <Main>
         <Image
           src={"/_assets/bigIdea.png"}
           alt={"idea"}
@@ -43,7 +44,7 @@ const Intro = () => {
           height={50}
           className="absolute bottom-40 left-2/4 -ml-32"
         />
-      </main>
+      </Main>
     </Section>
   );
 };
