@@ -5,7 +5,7 @@ import Section from "../_reuseable/Section";
 const Rules = () => {
   return (
     <Section>
-      <main className="relative py-28 px-32 flex items-center justify-between gap-36">
+      <main className="relative py-24 px-32 flex items-center justify-between gap-36">
         <div className="">
           <h3 className="text-5xl mb-10">
             Rules and
@@ -24,7 +24,7 @@ const Rules = () => {
 
         <Image
           src={"/_assets/rules.png"}
-          alt={"sittinglady"}
+          alt={"peoplestanding"}
           width={500}
           height={500}
         />
