@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Section from "../_reuseable/Section";
+import H3 from "../_reuseable/H3";
 
 const Attributes = () => {
   const attributesArr = [
@@ -56,15 +57,11 @@ const Attributes = () => {
             width={20}
             height={20}
             className="absolute -right-4"
-
           />
         </div>
 
         <div className="">
-          <h3 className="text-5xl mb-10">
-            Judging Criteria
-            <br /> <span className="text-pink block mt-4">Key attributes</span>
-          </h3>
+          <H3 head="Judging Criteria" span="Key attributes" />
 
           {attributes}
           <button className="mt-4 inline-block bg-gradient-to-r from-pink to-blue px-14 py-3 text-2xl rounded">

@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Section from "../_reuseable/Section";
 import Image from "next/image";
+import H3 from "../_reuseable/H3";
 
 const Intro = () => {
   return (
@@ -15,10 +16,7 @@ const Intro = () => {
 
         <div className="">
           <div className="flex items-center justify-between">
-            <h3 className="text-5xl mb-10">
-              Introduction to getlinked <br />{" "}
-              <span className="text-pink">tech Hackathon 1.0</span>
-            </h3>
+            <H3 head="Introduction to getlinked" span="tech Hackathon 1.0" />
 
             <Image
               src={"/_assets/starPu.png"}
