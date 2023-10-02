@@ -1,4 +1,5 @@
 import Attributes from './_components/Attributes'
+import Faq from './_components/Faq'
 import Header from './_components/Header'
 import Hero from './_components/Hero'
 import Intro from './_components/Intro'
@@ -13,6 +14,7 @@ export default function Home() {
       <Intro/>
       <Rules/>
       <Attributes/>
+      <Faq/>
     </main>
   )
 }
