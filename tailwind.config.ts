@@ -18,7 +18,8 @@ const config: Config = {
         pink: "#D434FE",
         darkPink: "#FF26B9",
         blue: "#903AFF",
-        border: "#d434fe14"
+        border: "#d434fe14",
+        bg: "#150e28"
       }
     },
   },

@@ -39,23 +39,35 @@ const Faq = () => {
 
   const handleClick = useCallback(
     (id: any) => {
-      setActiveArc(id)
+      setActiveArc(id);
       if (id === activeArc) {
-        setActiveArc(undefined)
+        setActiveArc(undefined);
       }
-    }, 
-    [activeArc],
-  )
-
+    },
+    [activeArc]
+  );
 
   const faqs = faq.map((faq) => {
     return (
       <div key={faq.idx} className="w-full">
-        <button className="border-b border-pink text-2xl mt-4 mb-3 pb-4 flex items-center justify-between w-full" onClick={() => handleClick(faq.idx)}>
+        <button
+          className="border-b border-pink text-2xl mt-4 mb-3 pb-4 flex items-center justify-between w-full"
+          onClick={() => handleClick(faq.idx)}
+        >
           <span className="">{faq.q}</span>{" "}
-          <span className="inline-block text-pink">+</span>
+          <span className="inline-block text-pink text-4xl">
+            {faq.idx === activeArc ? "-" : "+"}
+          </span>
         </button>
-        <div  className={`text-xl transition-all duration-100 ${faq.idx === activeArc ? 'h-20 visible opacity-100' : "text-xl h-0 invisible opacity-0"}`}>{faq.a}</div>
+        <div
+          className={`text-pink text-xl transition-all duration-100 ${
+            faq.idx === activeArc
+              ? "h-20 visible opacity-100"
+              : "text-xl h-0 invisible opacity-0"
+          }`}
+        >
+          {faq.a}
+        </div>
       </div>
     );
   });
@@ -74,13 +86,66 @@ const Faq = () => {
           {faqs}
         </div>
 
-        <Image
-          src={"/_assets/faq.png"}
-          alt={"peoplestanding"}
-          width={500}
-          height={500}
-          className="w-1/2"
-        />
+        <div className="relative w-full pt-10">
+          <div className="">
+            <div
+              style={{ textShadow: "0 0 3px #A866FD, 0 0 5px #A866FD" }}
+              className="text-bg absolute text-8xl -top-1 left-24"
+            >
+              ?
+            </div>
+            <div
+              style={{ textShadow: "0 0 3px #D434FE, 0 0 5px #D434FE" }}
+              className="text-bg absolute text-9xl left-64 -top-16"
+            >
+              ?
+            </div>
+            <div
+              style={{ textShadow: "0 0 3px #A866FD, 0 0 5px #A866FD" }}
+              className="text-bg absolute text-8xl right-72 -top-1"
+            >
+              ?
+            </div>
+          </div>
+
+          <Image
+            src={"/_assets/faq.png"}
+            alt={"peoplestanding"}
+            width={500}
+            height={500}
+            className="w-full"
+          />
+
+          <Image
+            src={"/_assets/starPu.png"}
+            alt={"star"}
+            width={15}
+            height={15}
+            className="absolute right-96 top-1"
+          />
+
+          <Image
+            src={"/_assets/starPu.png"}
+            alt={"star"}
+            width={15}
+            height={15}
+            className="absolute top-44 left-36"
+          />
+           <Image
+            src={"/_assets/star2.png"}
+            alt={"star"}
+            width={20}
+            height={20}
+            className="absolute top-96"
+          />
+          <Image
+            src={"/_assets/star.png"}
+            alt={"star"}
+            width={20}
+            height={20}
+            className="absolute right-44"
+          />
+        </div>
       </Main>
     </Section>
   );
