@@ -4,6 +4,7 @@ import Header from './_components/Header'
 import Hero from './_components/Hero'
 import Intro from './_components/Intro'
 import Rules from './_components/Rules'
+import Timeline from './_components/Timeline'
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Rules/>
       <Attributes/>
       <Faq/>
+      <Timeline/>
     </main>
   )
 }
