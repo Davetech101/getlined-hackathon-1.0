@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useCallback, SetStateAction } from "react";
 import Image from "next/image";
 import H3 from "../_reuseable/H3";
 import Main from "../_reuseable/Main";
@@ -7,7 +7,7 @@ import Section from "../_reuseable/Section";
 
 const Faq = () => {
   const [activeArc, setActiveArc] = useState();
-  const [arcIdx, setArcIdx] = useState();
+  const [openArc, setOpenArc] = useState(false);
 
   const faq = [
     {
@@ -37,14 +37,25 @@ const Faq = () => {
     },
   ];
 
+  const handleClick = useCallback(
+    (id: any) => {
+      setActiveArc(id)
+      if (id === activeArc) {
+        setActiveArc(undefined)
+      }
+    }, 
+    [activeArc],
+  )
+
+
   const faqs = faq.map((faq) => {
     return (
       <div key={faq.idx} className="w-full">
-        <button className="border-b border-pink text-2xl mt-4 mb-3 pb-4 flex items-center justify-between w-full">
+        <button className="border-b border-pink text-2xl mt-4 mb-3 pb-4 flex items-center justify-between w-full" onClick={() => handleClick(faq.idx)}>
           <span className="">{faq.q}</span>{" "}
-          <span className="inline-block  text-pink">+</span>
+          <span className="inline-block text-pink">+</span>
         </button>
-        <div className="text-xl h-0 invisible">{faq.a}</div>
+        <div  className={`text-xl transition-all duration-100 ${faq.idx === activeArc ? 'h-20 visible opacity-100' : "text-xl h-0 invisible opacity-0"}`}>{faq.a}</div>
       </div>
     );
   });
