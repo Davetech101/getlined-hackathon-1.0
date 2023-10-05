@@ -16,8 +16,10 @@ const config: Config = {
 
       colors: {
         pink: "#D434FE",
+        lightPink: "rgba(212, 52, 254, 0.12)",
         darkPink: "#FF26B9",
         blue: "#903AFF",
+        lightBlue: "rgba(144, 58, 255, 0.12)",
         border: "#d434fe14",
         bg: "#150e28"
       }
