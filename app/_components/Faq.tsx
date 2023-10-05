@@ -1,5 +1,5 @@
 "use client";
-import { useState, useCallback, SetStateAction } from "react";
+import { useState, useCallback,} from "react";
 import Image from "next/image";
 import H3 from "../_reuseable/H3";
 import Main from "../_reuseable/Main";

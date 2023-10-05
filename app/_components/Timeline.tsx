@@ -1,5 +1,4 @@
-import { useCallback } from "react";
-import Main from "../_reuseable/Main";
+import Image from "next/image";
 import Section from "../_reuseable/Section";
 
 const Timeline = () => {
@@ -45,30 +44,52 @@ const Timeline = () => {
 
   const line = timeline.map((line) => {
     return (
-      <div key={line.id} className={`flex items-center justify-center gap-24  ${line.id % 2 === 0 ? "flex-row-reverse text-left": "flex-row text-right"}`}>
-        <div className=" w-4/12">
-          <h3 className="text-2xl text-pink">{line.name}</h3>
-          <p className="text-xl">{line.txt}</p>
+      <div key={line.id} className={`flex items-center justify-center gap-24  ${line.id % 2 === 0 ? "flex-row-reverse": "flex-row"}`}>
+        <div className={`w-5/12 mb-12 ${line.id % 2 === 0 ? "text-left" : "text-right"}`}>
+          <h3 className="text-2xl text-pink mb-4">{line.name}</h3>
+          <p className="text-lg">{line.txt}</p>
         </div>
 
-        <div className="bg-gradient-to-r from-pink to-blue w-10 h-10 rounded-full text-center flex items-center justify-center">{line.id}</div>
+        <div className="bg-gradient-to-r from-pink to-blue w-10 h-10 rounded-full text-center flex items-center justify-center relative">{line.id} <div className="absolute bg-pink w-1 h-20 -top-24"></div></div>
 
-        <p className={`text-2xl text-pink w-4/12 text-left ${line.id % 2 === 0 ? "text-left" : "text-right"}`}>{line.date}</p>
+        <p className={`text-2xl text-pink w-5/12 ${line.id % 2 === 0 ? "text-right" : "text-left"}`}>{line.date}</p>
       </div>
     );
   });
 
   return (
     <Section>
-        <main className="relative py-24 px-32 flex items-center flex-col justify-center w-full">
+        <main className="relative py-24 px-32 flex items-center flex-col justify-center w-full relative">
           <h3 className="text-4xl mb-6">Timeline</h3>
 
-          <p className="text-xl w-3/6 text-center mb-24">
+          <p className="text-xl w-2/6 text-center mb-40">
             Here is the breakdown of the time we anticipate using for the
             upcoming event.
           </p>
 
           {line}
+
+          <Image
+            src={"/_assets/starPu.png"}
+            alt={"star"}
+            width={15}
+            height={15}
+            className="absolute top-64 left-96"
+          />
+           <Image
+            src={"/_assets/star2.png"}
+            alt={"star"}
+            width={20}
+            height={20}
+            className="absolute bottom-40 left-80"
+          />
+          <Image
+            src={"/_assets/star.png"}
+            alt={"star"}
+            width={20}
+            height={20}
+            className="absolute right-96"
+          />
         </main>
     </Section>
   );
