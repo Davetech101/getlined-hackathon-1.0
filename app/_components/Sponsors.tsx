@@ -4,7 +4,7 @@ import Section from "../_reuseable/Section";
 
 function Sponsors() {
     const dash = "bg-pink h-px w-1/4"
-    const line = "bg-pink w-px h-full"
+    const line = "bg-pink w-px h-32"
     
   return (
     <Section>
@@ -19,7 +19,7 @@ function Sponsors() {
         </div>
 
         <div className="border border-2 rounded-md px-20 w-full py-24 border-border">
-          <div className="flex justify-around items-center mb-16 px-20">
+          <div className="flex justify-around items-center mb-16 px-20 h-full">
             <Image
               src={"/_assets/liberty.png"}
               alt={"logo"}
@@ -27,7 +27,7 @@ function Sponsors() {
               height={100}
               className=""
             />
-            <div className=""></div>
+            <div className={line}></div>
             <Image
               src={"/_assets/libertypay.png"}
               alt={"logo"}
@@ -35,7 +35,7 @@ function Sponsors() {
               height={100}
               className=""
             />
-            <div className=""></div>
+            <div className={line}></div>
             <Image
               src={"/_assets/winwise.png"}
               alt={"logo"}
@@ -65,7 +65,7 @@ function Sponsors() {
               height={100}
               className=""
             />
-            <div className=""></div>
+            <div className={line}></div>
             <Image
               src={"/_assets/liberty.png"}
               alt={"logo"}
