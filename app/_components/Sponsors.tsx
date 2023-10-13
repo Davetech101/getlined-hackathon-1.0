@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Main from "../_reuseable/Main";
 import Section from "../_reuseable/Section";
 
 function Sponsors() {
