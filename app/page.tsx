@@ -3,6 +3,7 @@ import Faq from './_components/Faq'
 import Header from './_components/Header'
 import Hero from './_components/Hero'
 import Intro from './_components/Intro'
+import Privacy from './_components/Privacy'
 import Prizes from './_components/Prizes'
 import Rules from './_components/Rules'
 import Sponsors from './_components/Sponsors'
@@ -21,6 +22,7 @@ export default function Home() {
       <Timeline/>
       <Prizes/>
       <Sponsors/>
+      <Privacy/>
     </main>
   )
 }
