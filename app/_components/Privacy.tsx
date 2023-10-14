@@ -34,12 +34,12 @@ const Privacy = () => {
 
             <div className="">
               <div className="">
-                The Standard License grants you a non-exclusive right to
-                navigate and register for our event
+                <p className="">The Standard License grants you a non-exclusive right to
+                navigate and register for our event</p>
               </div>
               <div className="">
-                You are licensed to use the item available at any free source
-                sites, for your project developement
+                <p className="">You are licensed to use the item available at any free source
+                sites, for your project developement</p>
               </div>
             </div>
           </div>
