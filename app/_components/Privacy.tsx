@@ -1,3 +1,4 @@
+import Image from "next/image";
 import H3 from "../_reuseable/H3";
 import Section from "../_reuseable/Section";
 
@@ -34,10 +35,24 @@ const Privacy = () => {
 
             <div className="">
               <div className="">
+              <Image
+              src={"/_assets/liberty.png"}
+              alt={"logo"}
+              width={100}
+              height={100}
+              className=""
+            />
                 <p className="">The Standard License grants you a non-exclusive right to
                 navigate and register for our event</p>
               </div>
               <div className="">
+              <Image
+              src={"/_assets/liberty.png"}
+              alt={"logo"}
+              width={100}
+              height={100}
+              className=""
+            />
                 <p className="">You are licensed to use the item available at any free source
                 sites, for your project developement</p>
               </div>
