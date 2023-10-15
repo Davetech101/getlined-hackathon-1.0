@@ -5,7 +5,7 @@ import Section from "../_reuseable/Section";
 const Privacy = () => {
   return (
     <Section>
-      <main className="">
+      <main className="py-32 px-32 flex items-center justify-between">
         <div className="">
           <div className="">
             <H3 head="Privacy Policy and" span="Terms" />
@@ -36,10 +36,10 @@ const Privacy = () => {
             <div className="">
               <div className="">
               <Image
-              src={"/_assets/liberty.png"}
-              alt={"logo"}
-              width={100}
-              height={100}
+              src={"/_assets/check.svg"}
+              alt={"check"}
+              width={20}
+              height={20}
               className=""
             />
                 <p className="">The Standard License grants you a non-exclusive right to
@@ -47,10 +47,10 @@ const Privacy = () => {
               </div>
               <div className="">
               <Image
-              src={"/_assets/liberty.png"}
-              alt={"logo"}
-              width={100}
-              height={100}
+              src={"/_assets/check.svg"}
+              alt={"check"}
+              width={20}
+              height={20}
               className=""
             />
                 <p className="">You are licensed to use the item available at any free source
@@ -59,7 +59,21 @@ const Privacy = () => {
             </div>
           </div>
         </div>
-        <div className=""></div>
+        <div className="">
+        <Image
+              src={"/_assets/privacy.svg"}
+              alt={"privacy"}
+              width={200}
+              height={200}
+              className=""
+            /><Image
+            src={"/_assets/privacy.png"}
+            alt={"lock"}
+            width={200}
+            height={200}
+            className=""
+          />
+        </div>
       </main>
     </Section>
   );
