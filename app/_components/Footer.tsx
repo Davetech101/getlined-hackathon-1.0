@@ -91,7 +91,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <p className="">All rights reserved. © getlinked Ltd</p>
+        <p className="text-xl">All rights reserved. &copy; getlinked Ltd</p>
       </main>
     </Section>
   );
