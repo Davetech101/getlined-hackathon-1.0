@@ -26,7 +26,7 @@ const Header = () => {
                 <Link href="/">FAQs</Link>
               </li>
               <li className={liStyles}>
-                <Link href="/">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </nav>
