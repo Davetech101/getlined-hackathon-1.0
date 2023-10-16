@@ -5,18 +5,18 @@ import Section from "../_reuseable/Section";
 const Privacy = () => {
   return (
     <Section>
-      <main className="py-32 px-32 flex items-center justify-between">
-        <div className="w-2/4">
+      <main className="pt-32 pb-52 px-32 flex items-top justify-between">
+        <div className="w-5/12">
             <H3 head="Privacy Policy and" span="Terms" />
 
             <p className="mb-8 text-xl">Last updated on September 12, 2023</p>
 
-            <p className="text-xl mb-20 pr-72">
+            <p className="text-xl mb-20">
               Below are our privacy & policy, which outline a lot of goodies.
               it’s our aim to always take of our participant
             </p>
 
-          <div className="border border-pink p-24">
+          <div className="border border-pink p-16">
             <p className="text-xl mb-8">
               At getlinked tech Hackathon 1.0, we value your privacy and are
               committed to protecting your personal information. This Privacy
@@ -63,20 +63,20 @@ const Privacy = () => {
               </button>
           </div>
         </div>
-        <div className="">
+        <div className="relative">
           <Image
             src={"/_assets/privacy.svg"}
             alt={"privacy"}
-            width={200}
-            height={200}
+            width={400}
+            height={400}
             className=""
           />
           <Image
             src={"/_assets/privacy.png"}
             alt={"lock"}
-            width={200}
-            height={200}
-            className=""
+            width={400}
+            height={400}
+            className="absolute top-48"
           />
         </div>
       </main>
