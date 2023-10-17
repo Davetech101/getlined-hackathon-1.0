@@ -64,6 +64,8 @@ const Contact = () => {
             <input type="text" placeholder="First Name" className={inputStyles}/>
             <input type="email" placeholder="email" className={inputStyles}/>
             <textarea placeholder="message" className={`min-h-[100px] ${inputStyles}`}></textarea>
+
+            <button className=" inline-block bg-gradient-to-r from-pink to-blue px-14 py-3 text-2xl rounded">Submit</button>
         </form>
       </div>
     </main>
