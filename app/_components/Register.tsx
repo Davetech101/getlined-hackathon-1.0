@@ -23,18 +23,26 @@ const Register = () => {
           <div className="">
             <input
               type="text"
-              placeholder="First Name"
+              placeholder="Enter the name of your group"
               className={inputStyles}
             />
-            <input type="email" placeholder="email" className={inputStyles} />
+            <input
+              type="number"
+              placeholder="Enter your phone number"
+              className={inputStyles}
+            />
           </div>
           <div className="">
             <input
-              type="text"
-              placeholder="First Name"
+              type="email"
+              placeholder="Enter your email address"
               className={inputStyles}
             />
-            <input type="email" placeholder="email" className={inputStyles} />
+            <input
+              type="text"
+              placeholder="What is your group project topic"
+              className={inputStyles}
+            />
           </div>
           <address>
             Please review your registration details before submitting
