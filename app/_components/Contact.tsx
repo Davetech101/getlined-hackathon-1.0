@@ -1,28 +1,29 @@
 import Image from "next/image";
 
 const Contact = () => {
+    const inputStyles = "px-10 py-4 bg-transparent border"
   return (
-    <main>
+    <main className="py-32 px-48 flex items-center justify-between">
       <div className="">
-        <h3 className="">Get in touch</h3>
+        <h3 className="text-pink text-2xl mb-8">Get in touch</h3>
 
-        <p>
+        <p className="text-2xl mb-6">
           Contact <br />
           Information
         </p>
 
-        <p className="">
-          27,Alara Street <br />
+        <p className="text-2xl mb-6">
+          27, Alara Street <br />
           Yaba 100012 <br />
           Lagos State
         </p>
 
-        <p className="">Call Us : 07067981819</p>
-        <strong>we are open from Monday-Friday 08:00am - 05:00pm</strong>
+        <p className="text-2xl mb-6">Call Us : 07067981819</p>
+        <strong className="text-2xl block mb-6">we are open from Monday-Friday <br /> 08:00am - 05:00pm</strong>
 
-        <p className=" text-xl text-pink gap-4">
+        <p className=" text-2xl text-pink gap-4">
           Share on
-          <div className="flex items-center">
+          <div className="flex items-center mt-3 gap-3">
             <Image
               src={"/_assets/instagram.svg"}
               alt={"ig"}
@@ -55,14 +56,14 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="">
-        <p>Questions or need assistance?</p>
-        <p>Let us know  about it!</p>
+      <div className="bg-contactBg p-24 w-2/4">
+        <strong className="text-2xl text-pink mb-2 block">Questions or need assistance?</strong>
+        <strong className="text-2xl text-pink">Let us know  about it!</strong>
 
-        <form action="">
-            <input type="text" placeholder="First Name" />
-            <input type="email" name="" id="" />
-            <textarea name="" id=""></textarea>
+        <form action="" className="flex flex-col mt-8 gap-10">
+            <input type="text" placeholder="First Name" className={inputStyles}/>
+            <input type="email" placeholder="email" className={inputStyles}/>
+            <textarea placeholder="message" className={`min-h-[100px] ${inputStyles}`}></textarea>
         </form>
       </div>
     </main>

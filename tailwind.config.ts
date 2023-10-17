@@ -21,7 +21,8 @@ const config: Config = {
         blue: "#903AFF",
         lightBlue: "rgba(144, 58, 255, 0.12)",
         border: "#d434fe14",
-        bg: "#150e28"
+        bg: "#150e28",
+        contactBg: "rgba(255, 255, 255, 0.03)"
       }
     },
   },
