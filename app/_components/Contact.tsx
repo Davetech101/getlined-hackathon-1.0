@@ -3,7 +3,7 @@ import Image from "next/image";
 const Contact = () => {
     const inputStyles = "px-10 py-4 bg-transparent border"
   return (
-    <main className="py-32 px-48 flex items-center justify-between">
+    <main className="py-32 px-48 flex items-center justify-between rounded-3xl">
       <div className="">
         <h3 className="text-pink text-2xl mb-8">Get in touch</h3>
 
