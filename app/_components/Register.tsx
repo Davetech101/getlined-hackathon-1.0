@@ -2,6 +2,11 @@ import Image from "next/image";
 
 const Register = () => {
   const inputStyles = "px-10 py-4 bg-transparent border";
+  const labelStyles = ""
+  const groupStyles = "flex gap-10"
+  const inputCont = "flex flex-col w-full gap-3"
+  const selectStyles = ""
+
   return (
     <main className="flex items-center justify-between pr-32 rounded-3xl">
       <Image
@@ -20,29 +25,72 @@ const Register = () => {
         <h2 className="text-3xl">CREATE YOUR ACCOUNT</h2>
 
         <form action="" className="flex flex-col mt-8 gap-10">
-          <div className="">
-            <input
-              type="text"
-              placeholder="Enter the name of your group"
-              className={inputStyles}
-            />
-            <input
-              type="number"
-              placeholder="Enter your phone number"
-              className={inputStyles}
-            />
+          <div className={groupStyles}>
+            <div className={inputCont}>
+              <label htmlFor="name">Team&apos;s name</label>
+              <input
+                type="text"
+                placeholder="Enter the name of your group"
+                className={inputStyles}
+                id="name"
+              />
+            </div>
+            <div className={inputCont}>
+              <label htmlFor="phone">Phone</label>
+
+              <input
+                type="number"
+                placeholder="Enter your phone number"
+                className={inputStyles}
+                id="phone"
+              />
+            </div>
           </div>
-          <div className="">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className={inputStyles}
-            />
-            <input
-              type="text"
-              placeholder="What is your group project topic"
-              className={inputStyles}
-            />
+          <div className={groupStyles}>
+            <div className={inputCont}>
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className={inputStyles}
+                id="email"
+              />
+            </div>
+            <div className={inputCont}>
+              <label htmlFor="topic">Project Topic</label>
+              <input
+                type="text"
+                placeholder="What is your group project topic"
+                className={inputStyles}
+                id="topic"
+              />
+            </div>
+          </div>
+
+          <div className={groupStyles}>
+            <div className={inputCont}>
+              <label htmlFor="category">Category</label>
+              <select name="category" id="category" className="bg-pink">
+                <optgroup label="Select Category">
+                  <option value="">Select Your Category</option>
+                  <option value="">option1</option>
+                  <option value="">option1</option>
+                  <option value="">option1</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div className={inputCont}>
+              <label htmlFor="size">Group Size</label>
+              <select name="size" id="size" className="bg-pink">
+                <optgroup label="Select size">
+                  <option value="">Select</option>
+                  <option value="">option1</option>
+                  <option value="">option1</option>
+                  <option value="">option1</option>
+                </optgroup>
+              </select>
+            </div>
           </div>
           <address>
             Please review your registration details before submitting
