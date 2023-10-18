@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 const Register = () => {
-  const inputStyles = "px-10 py-4 bg-transparent border";
-  const labelStyles = ""
+  const inputStyles = "px-10 py-4 bg-transparent border text-xl rounded-lg";
+  const labelStyles = "text-xl"
   const groupStyles = "flex gap-10"
   const inputCont = "flex flex-col w-full gap-3"
   const selectStyles = ""
@@ -17,7 +17,7 @@ const Register = () => {
         className=""
       />
 
-      <div className="bg-contactBg p-24 w-2/4">
+      <div className="bg-contactBg p-16 w-2/4">
         <strong className="text-4xl text-pink mb-16 block">Register</strong>
 
         <p className="text-xl mb-8">Be part of this movement!</p>
@@ -27,7 +27,7 @@ const Register = () => {
         <form action="" className="flex flex-col mt-8 gap-10">
           <div className={groupStyles}>
             <div className={inputCont}>
-              <label htmlFor="name">Team&apos;s name</label>
+              <label htmlFor="name" className={labelStyles}>Team&apos;s name</label>
               <input
                 type="text"
                 placeholder="Enter the name of your group"
@@ -36,7 +36,7 @@ const Register = () => {
               />
             </div>
             <div className={inputCont}>
-              <label htmlFor="phone">Phone</label>
+              <label htmlFor="phone" className={labelStyles}>Phone</label>
 
               <input
                 type="number"
@@ -48,7 +48,7 @@ const Register = () => {
           </div>
           <div className={groupStyles}>
             <div className={inputCont}>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" className={labelStyles}>Email</label>
               <input
                 type="email"
                 placeholder="Enter your email address"
@@ -57,7 +57,7 @@ const Register = () => {
               />
             </div>
             <div className={inputCont}>
-              <label htmlFor="topic">Project Topic</label>
+              <label htmlFor="topic" className={labelStyles}>Project Topic</label>
               <input
                 type="text"
                 placeholder="What is your group project topic"
@@ -69,7 +69,7 @@ const Register = () => {
 
           <div className={groupStyles}>
             <div className={inputCont}>
-              <label htmlFor="category">Category</label>
+              <label htmlFor="category" className={labelStyles}>Category</label>
               <select name="category" id="category" className="bg-pink">
                 <optgroup label="Select Category">
                   <option value="">Select Your Category</option>
@@ -81,7 +81,7 @@ const Register = () => {
             </div>
 
             <div className={inputCont}>
-              <label htmlFor="size">Group Size</label>
+              <label htmlFor="size" className={labelStyles}>Group Size</label>
               <select name="size" id="size" className="bg-pink">
                 <optgroup label="Select size">
                   <option value="">Select</option>
