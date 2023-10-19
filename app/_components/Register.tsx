@@ -5,7 +5,7 @@ const Register = () => {
   const labelStyles = "text-xl"
   const groupStyles = "flex gap-10"
   const inputCont = "flex flex-col w-full gap-3"
-  const selectStyles = ""
+  const selectStyles = "bg-transparent border rounded-lg px-10 py-4 text-xl"
 
   return (
     <main className="flex items-center justify-between pr-32 rounded-3xl">
@@ -70,7 +70,7 @@ const Register = () => {
           <div className={groupStyles}>
             <div className={inputCont}>
               <label htmlFor="category" className={labelStyles}>Category</label>
-              <select name="category" id="category" className="bg-pink">
+              <select name="category" id="category" className={selectStyles}>
                 <optgroup label="Select Category">
                   <option value="">Select Your Category</option>
                   <option value="">option1</option>
@@ -82,7 +82,7 @@ const Register = () => {
 
             <div className={inputCont}>
               <label htmlFor="size" className={labelStyles}>Group Size</label>
-              <select name="size" id="size" className="bg-pink">
+              <select name="size" id="size" className={selectStyles}>
                 <optgroup label="Select size">
                   <option value="">Select</option>
                   <option value="">option1</option>
@@ -92,15 +92,15 @@ const Register = () => {
               </select>
             </div>
           </div>
-          <address>
+          <address className="text-pink">
             Please review your registration details before submitting
           </address>
 
-          <div className="">
-            <input type="checkbox" name="" id="" />
-            <p className="">
+          <div className="flex gap-2">
+            <input type="checkbox" name="" id="" className="bg-transparent"/>
+            <p className="text-xl">
               {" "}
-              agreed with the event terms and conditions and privacy policy
+              I agreed with the event terms and conditions and privacy policy
             </p>
           </div>
 
