@@ -1,32 +1,51 @@
-import Link from "next/link";
+"use client"
+
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+import NavLink from "next/link";
 import RegisterBtn from "../_reuseable/RegisterBtn";
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false)
+  const router = useRouter()
+  console.log(router);
+  
   const flex = "flex items-center justify-between";
-  const liStyles = "text-2xl"
+  const liStyles = "text-2xl p-2 hover:text-pink"
+  const linkStyles = "active:bg-violet-700"
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (document.body.getBoundingClientRect().top <= -90) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    });
+  }, []);
 
   return (
-    <header className="px-24 py-10 border-b-border border-b">
+    <header className={`px-24 py-10 border-b-border border-b z-50 transition-all   ${scrolled ? "fixed bg-bground w-full" : ""}`}>
       <div className={`${flex}`}>
-        <Link href="/" className="text-5xl">
+        <NavLink href="/" className="text-5xl">
           <span className="">get</span>
           <span className="text-pink">linked</span>
-        </Link>
+        </NavLink>
 
         <div className={`${flex} w-7/12 gap-60`}>
           <nav className="w-full">
             <ul className={`${flex} w-full`}>
             <li className={liStyles}>
-                <Link href="/">Timeline</Link>
+                <NavLink href="/" className={linkStyles}>Timeline</NavLink>
               </li>
               <li className={liStyles}>
-                <Link href="/">Overview</Link>
+                <NavLink href="/" className={linkStyles}>Overview</NavLink>
               </li>
               <li className={liStyles}>
-                <Link href="/">FAQs</Link>
+                <NavLink href="/" className={linkStyles}>FAQs</NavLink>
               </li>
               <li className={liStyles}>
-                <Link href="/contact">Contact</Link>
+                <NavLink href="/contact" >Contact</NavLink>
               </li>
             </ul>
           </nav>
