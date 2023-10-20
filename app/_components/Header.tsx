@@ -1,14 +1,14 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import NavLink from "next/link";
 import RegisterBtn from "../_reuseable/RegisterBtn";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
-  const router = useRouter()
-  console.log(router);
+  const pathname = usePathname()
+  console.log(pathname);
   
   const flex = "flex items-center justify-between";
   const liStyles = "text-2xl p-2 hover:text-pink"
@@ -45,7 +45,7 @@ const Header = () => {
                 <NavLink href="/" className={linkStyles}>FAQs</NavLink>
               </li>
               <li className={liStyles}>
-                <NavLink href="/contact" >Contact</NavLink>
+                <NavLink href="/contact" className={pathname == "/contact" ? "bg-gradient-to-r from-blue to-pink bg-clip-text text-transparent" : " "} >Contact</NavLink>
               </li>
             </ul>
           </nav>
