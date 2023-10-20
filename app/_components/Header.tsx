@@ -16,7 +16,7 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (document.body.getBoundingClientRect().top <= -90) {
+      if (document.body.getBoundingClientRect().top <= -20) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`px-24 py-10 border-b-border border-b z-50 transition-all   ${scrolled ? "fixed bg-bground w-full" : ""}`}>
+    <header className={`px-24 py-10 border-b-border border-b z-50 transition-all duration-500   ${scrolled ? "fixed bg-bground w-full" : ""}`}>
       <div className={`${flex}`}>
         <NavLink href="/" className="text-5xl">
           <span className="">get</span>
