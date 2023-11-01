@@ -1,6 +1,7 @@
 import Section from "../_reuseable/Section";
 import RegisterBtn from "../_reuseable/RegisterBtn";
 import Image from "next/image";
+import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   const nomStyles = "text-8xl";
@@ -85,6 +86,34 @@ const Hero = () => {
         <div className="flex flex-col align-center justify-between relative">
           <div className="relative  -top-14">
             <h3 className="text-5xl">Igniting a Revolution in HR Innovation</h3>
+            <h2>
+              {/* <Typewriter
+            // className="text-orange hidden"
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Enomah")
+                .deleteAll()
+                .typeString("David Ogaranya Enomah")
+                .start();
+            }}
+          /> */}
+
+              {/* <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Hello World!")
+                    .callFunction(() => {
+                      console.log("String typed out!");
+                    })
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .callFunction(() => {
+                      console.log("All strings were deleted");
+                    })
+                    .start();
+                }}
+              /> */}
+            </h2>
             <div className="relative w-14 -right-96 ml-10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

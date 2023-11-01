@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from 'next/navigation';
 import NavLink from "next/link";
 import RegisterBtn from "../_reuseable/RegisterBtn";
+import Typewriter from "typewriter-effect";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -26,6 +27,17 @@ const Header = () => {
 
   return (
     <header className={`px-24 py-10 border-b-border border-b z-50 transition-all duration-500   ${scrolled ? "fixed bg-bground w-full" : ""}`}>
+      <h2>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Enomah")
+                .deleteAll()
+                .typeString("David Ogaranya Enomah")
+                .start();
+            }}
+          />
+        </h2>
       <div className={`${flex}`}>
         <NavLink href="/" className="text-5xl">
           <span className="">get</span>
